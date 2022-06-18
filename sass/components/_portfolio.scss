@@ -1,0 +1,133 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 84px;
+    padding-bottom: 104px;
+  }
+}
+.portfolio__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: -15px;
+  margin-left: -8px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+.portfolio__nav-item {
+  margin-top: 15px;
+  margin-left: 8px;
+}
+
+.portfolio__nav-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-text;
+  border: none;
+  border-radius: 4px;
+  background-color: $portfolio-button-bc;
+  cursor: pointer;
+  padding: 6px 22px;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.project__card-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+.project__card-item {
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+.project__link {
+  display: block;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover .project__description,
+  &:focus .project__description {
+    transform: translateY(0);
+  }
+}
+.project__card-box {
+  position: relative;
+  overflow: hidden;
+}
+.project__description {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  color: $primary-color;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition-property: transform, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project__discription-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.project__name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.project__id {
+  font-size: 16px;
+  line-height: 1.9;
+  color: $color-contact;
+}
